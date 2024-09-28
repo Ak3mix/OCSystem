@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Oc_System_DataAccess.Tests.Utilities
+namespace Oc_System.DataAccess.Test.Utilities
 {
     /// <summary>
     /// Proveedor de cadena de conexión.

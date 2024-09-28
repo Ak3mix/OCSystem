@@ -1,0 +1,44 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "OC_System.GrpcProtos";
+
+package GrpcProtos;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/struct.proto";
+import "common.proto";
+import "receta.proto";
+
+service Fase {
+    rpc CreateFase (CreateFaseRequest) returns (FaseDTO);
+    rpc GetFase (GetRequest) returns (NullableFaseDTO);
+    rpc GetAllFase (google.protobuf.Empty) returns (Fases);
+    rpc UpdateFase (FaseDTO) returns (google.protobuf.Empty);
+    rpc DeleteFase (DeleteRequest) returns (google.protobuf.Empty);
+}
+
+message FaseDTO{
+	string id = 1;
+	string name = 2;
+	string descripcion = 3;
+	RecetaDTO receta = 4;
+	string recetaid = 5;
+}
+
+message Fases{
+	repeated FaseDTO items = 1;
+}
+
+message NullableFaseDTO{
+	oneof kind{
+		google.protobuf.NullValue null = 1;
+		FaseDTO Fase = 2;
+	}
+}
+
+message CreateFaseRequest{
+	string name = 1;
+	string descripcion =2;
+	RecetaDTO receta = 3;
+}

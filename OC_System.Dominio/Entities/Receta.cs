@@ -19,10 +19,10 @@ namespace OC_System.Dominio.Entities
 
         protected Receta() { }
 
-        public Receta(string nombre, string codigo, string descripcion, string codigoUnidad)
+        public Receta(string rnombre, string rdescripcion, string codigoUnidad)
         {
-            Nombre = nombre;
-            Descripcion = descripcion;
+            Nombre = rnombre;
+            Descripcion = rdescripcion;
             CodigoUnidad = codigoUnidad;
 
         }

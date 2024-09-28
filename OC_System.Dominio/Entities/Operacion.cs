@@ -22,11 +22,11 @@ namespace OC_System.Dominio.Entities
 
 
     protected Operacion() { }
-    public Operacion(string nombre, string descripcion, string codigoUnidad)
+    public Operacion(string onombre, string odescripcion, string codigoUnidad)
     {
-        Nombre = nombre;
+        Nombre = onombre;
 
-        Descripcion = descripcion;
+        Descripcion = odescripcion;
         CodigoUnidad = codigoUnidad;
 
 

@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OC_System.Dominio.Entities;
-using OC_System_DataAccess.FluentConfiurations.Entities;
+using OC_System.DataAccess.FluentConfigurations.Entities;    
 
-namespace OC_System_DataAccess.Concrete
+namespace OC_System.DataAccess.Concrete
 {
     public class ApplicationContext : DbContext
     {
@@ -38,9 +38,9 @@ namespace OC_System_DataAccess.Concrete
             modelBuilder.Entity<Receta>().ToTable("Recetas");
             modelBuilder.Entity<Operacion>().ToTable("Operaciones");
 
-            //modelBuilder.ApplyConfiguration(new FaseEntityTypeConfiguration());
-            //modelBuilder.ApplyConfiguration(new OperacionEntityTypeConfiguration());
-            //modelBuilder.ApplyConfiguration(new RecetaEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new FaseEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new OperacionEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new RecetaEntityTypeConfiguration());
 
         }
 

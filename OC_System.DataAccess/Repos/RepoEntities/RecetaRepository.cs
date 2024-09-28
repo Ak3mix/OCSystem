@@ -1,5 +1,5 @@
 ﻿using OC_System_Contracts;
-using OC_System_DataAccess.Concrete;
+using OC_System.DataAccess.Concrete;
 using OC_System_DataAccess.Repos.Common;
 using OC_System.Dominio.Entities;
 
@@ -15,7 +15,7 @@ namespace OC_System_DataAccess.Repos.RepoEntities
     {
         public RecetaRepository(ApplicationContext context) : base(context) { }
 
-        public void AddOperacion(Receta receta)
+        public void AddReceta(Receta receta)
         {
             _context.Recetas.Add(receta);
         }

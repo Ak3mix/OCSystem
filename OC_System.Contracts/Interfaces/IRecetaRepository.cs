@@ -8,7 +8,7 @@ namespace OC_System_Contracts
     public interface IRecetaRepository
     {
 
-        void AddOperacion(Receta receta);
+        void AddReceta(Receta receta);
 
         Receta? GetRecetaByID(Guid id);
 
