@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using OC_System.Domain.Common;
+using OC_System.Dominio.Common;
 
 
 namespace OC_System_DataAccess.FluentConfiurations.Common

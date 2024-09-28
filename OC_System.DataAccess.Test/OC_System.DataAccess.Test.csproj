@@ -19,8 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OC_System\OC_System.Domain.csproj" />
-    <ProjectReference Include="..\OC_System_DataAccess\OC_System_DataAccess.csproj" />
+    <ProjectReference Include="..\OC_System.Contracts\OC_System.Contracts.csproj" />
+    <ProjectReference Include="..\OC_System.DataAccess\OC_System.DataAccess.csproj" />
+    <ProjectReference Include="..\OC_System.Dominio\OC_System.Dominio.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using OC_System_Contracts;
 using OC_System_DataAccess.Concrete;
 using OC_System_DataAccess.Repos.Common;
-using OC_System.Domain.Entities;
+using OC_System.Dominio.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

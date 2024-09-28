@@ -1,4 +1,4 @@
-﻿using OC_System.Domain.Entities;
+﻿using OC_System.Dominio.Entities;
 using System.Data.SqlTypes;
 
 namespace OC_System_Contracts

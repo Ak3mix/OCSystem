@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OC_System.Domain.Entities;
+using OC_System.Dominio.Entities;
 using OC_System_DataAccess.FluentConfiurations.Entities;
 
 namespace OC_System_DataAccess.Concrete
