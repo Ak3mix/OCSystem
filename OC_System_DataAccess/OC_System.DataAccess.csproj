@@ -30,7 +30,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OC_System\OC_System.Domain.csproj" />
-    <ProjectReference Include="..\OC_System_Contracts\OC_System_Contracts.csproj" />
+    <ProjectReference Include="..\OC_System_Contracts\OC_System.Contracts.csproj" />
+    <ProjectReference Include="..\OC_System_DataAccess.Test\OC_System.DataAccess.Test.csproj" />
   </ItemGroup>
 
 </Project>
