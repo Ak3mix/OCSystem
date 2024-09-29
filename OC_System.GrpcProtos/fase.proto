@@ -20,10 +20,11 @@ service Fase {
 
 message FaseDTO{
 	string id = 1;
-	string name = 2;
-	string descripcion = 3;
-	RecetaDTO receta = 4;
-	string recetaid = 5;
+	string name = 2	;
+    string code = 3;
+	string descripcion = 4;
+	RecetaDTO receta = 5;
+	string recetaid = 6;
 }
 
 message Fases{
@@ -39,6 +40,7 @@ message NullableFaseDTO{
 
 message CreateFaseRequest{
 	string name = 1;
-	string descripcion =2;
-	RecetaDTO receta = 3;
+	string code = 2;
+	string descripcion =3;
+	RecetaDTO receta = 4;
 }

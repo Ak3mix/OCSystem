@@ -22,8 +22,9 @@ message RecetaDTO{
 
   string id = 1;
   string rnombre= 2;
-  string rdescripcion= 3;
-  string unidadCodigo= 4;
+  string rcode= 3;
+  string rdescripcion= 4;
+  string unidadCodigo= 5;
 }
 
 message Recetas{
@@ -39,6 +40,7 @@ message NullableRecetaDTO{
 
 message CreateRecetaRequest{
   string rnombre= 1;
-  string rdescripcion= 2;
-  string unidadCodigo= 3;
+  string rcode= 2;
+  string rdescripcion= 3;
+  string unidadCodigo= 4;
 }

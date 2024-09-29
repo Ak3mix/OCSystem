@@ -13,7 +13,7 @@ namespace OC_System.DataAccess.FluentConfigurations.Entities
 {
 
 
-    internal class FaseEntityTypeConfiguration
+    public class FaseEntityTypeConfiguration
         : EntityTypeConfigurationBase<Fase>
     {
         public override void Configure(EntityTypeBuilder<Fase> builder)

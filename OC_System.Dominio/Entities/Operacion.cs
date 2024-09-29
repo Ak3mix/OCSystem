@@ -11,21 +11,20 @@ namespace OC_System.Dominio.Entities
     public class Operacion : Entity
     {
         public string Nombre { get; set; }
+        public string Code { get; set; }
     public string Descripcion { get; set; }
     public string CodigoUnidad { get; set; }
 
-    public List<Receta> Receta { get; set; }
-    public List<Fase> Fase { get; set; }
+    public List<Receta> Receta { get; set; } = new List<Receta>();
+    public List<Fase> Fase { get; set; } = new List<Fase>();
 
-    [NotMapped]
-    public List<double> Parametros { get; set; }
-
+    
 
     protected Operacion() { }
-    public Operacion(string onombre, string odescripcion, string codigoUnidad)
+    public Operacion(string onombre, string ocode, string odescripcion, string codigoUnidad)
     {
         Nombre = onombre;
-
+            Code= ocode;    
         Descripcion = odescripcion;
         CodigoUnidad = codigoUnidad;
 

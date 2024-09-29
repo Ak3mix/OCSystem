@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace OC_System_Contracts.Interfaces
+namespace OC_System.Contracts.Interfaces
 {
     public interface IUnitOfWork 
     {

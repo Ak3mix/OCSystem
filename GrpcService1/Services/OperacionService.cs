@@ -1,11 +1,22 @@
 ﻿using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using OC_System.GrpcProtos;
+using OC_System.Contracts.Interfaces;
+using OC_System.Contracts;
 
 namespace GrpcService1.Services
 {
     public class OperacionService : Operacion.OperacionBase
     {
+
+        private IOperaracionRepository _operacionRepository;
+        private IUnitOfWork _unitOfWork;
+
+        public OperacionService(IOperaracionRepository operacionRepository, IUnitOfWork unitOfWork)
+        {
+            _operacionRepository = operacionRepository;
+            _unitOfWork = unitOfWork;
+        }
         public override Task<OperacionDTO> CreateOperacion(CreateOperacionRequest request, ServerCallContext context)
         {
             return base.CreateOperacion(request, context);

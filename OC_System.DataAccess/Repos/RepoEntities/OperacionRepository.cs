@@ -1,13 +1,9 @@
 ﻿using OC_System_Contracts;
-using OC_System_DataAccess.Repos.Common;
+using OC_System.DataAccess.Repos.Common;
 using OC_System.Dominio.Entities;
 using OC_System.DataAccess.Concrete;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OC_System.Contracts;
 
 namespace OC_System.DataAccess.Repos.RepoEntities
 {

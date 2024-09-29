@@ -1,9 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OC_System.DataAccess.FluentConfigurations.Entities;
 using OC_System.Dominio.Entities;
-using OC_System.DataAccess.FluentConfigurations.Entities;    
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace OC_System.DataAccess.Concrete
 {
+  
     public class ApplicationContext : DbContext
     {
 
@@ -12,6 +18,11 @@ namespace OC_System.DataAccess.Concrete
         public DbSet<Operacion> Operacions { get; set; }
         public DbSet<Receta> Recetas { get; set; }
         #endregion
+        private static DbContextOptions GetOptions(string connectionString)
+        {
+            return SqliteDbContextOptionsBuilderExtensions.UseSqlite(
+                new DbContextOptionsBuilder(), connectionString).Options;
+        }
 
         public ApplicationContext() { }
         public ApplicationContext(string connectionString)
@@ -45,10 +56,8 @@ namespace OC_System.DataAccess.Concrete
         }
 
 
-        private static DbContextOptions GetOptions(string connectionString)
-        {
-            return new DbContextOptionsBuilder().UseSqlite(connectionString).Options;
-        }
+       
 
     }
 }
+

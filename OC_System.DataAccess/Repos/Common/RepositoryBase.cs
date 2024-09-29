@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OC_System_DataAccess.Repos.Common
+namespace OC_System.DataAccess.Repos.Common
 {
     public abstract class RepositoryBase
     {

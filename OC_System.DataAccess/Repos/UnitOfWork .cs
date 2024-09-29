@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OC_System_Contracts.Interfaces;
+using OC_System.Contracts.Interfaces;
 using OC_System.DataAccess.Concrete;
 
 namespace OC_System_Contracts

@@ -1,7 +1,7 @@
 ﻿using OC_System.Dominio.Entities;
 using System.Data.SqlTypes;
 
-namespace OC_System_Contracts
+namespace OC_System.Contracts
 
 
 {

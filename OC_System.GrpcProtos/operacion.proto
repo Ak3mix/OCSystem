@@ -20,9 +20,10 @@ service Operacion {
 
 message OperacionDTO{
 	string id = 1;
-	string name = 2;
-	string descripcion = 3;
-	string codigoUnidad = 4;
+	string onombre = 2;
+	string ocode = 3;
+	string odescripcion = 4;
+	string ocodigoUnidad = 5;
 }
 
 message Operaciones{
@@ -37,7 +38,8 @@ message NullableOperacionDTO{
 }
 
 message CreateOperacionRequest{
-	string name = 1;
-	string descripcion =2;
-	string codigoUnidad = 3;
+	string onombre = 1;
+	string ocode = 2;
+	string odescripcion =3;
+	string ocodigoUnidad = 4;
 }
