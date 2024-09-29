@@ -18,18 +18,13 @@ namespace OC_System.DataAccess.FluentConfigurations.Entities
     {
         public override void Configure(EntityTypeBuilder<Fase> builder)
         {
-            /// <summary>
-            /// Nombre de la tabla: "Variables"
-            /// </summary>
+            
             builder.ToTable("Fases");
-            /// <summary>
-            /// Relacion de uno a muchos con MeasurementUnit
-            /// </summary>
+            
             builder.HasOne(x => x.Receta)
                 .WithMany()
                 .HasForeignKey(x => x.RecetaId);
             builder.Ignore(x => x.Receta);
-            builder.Ignore(x => x.Operacion);
             base.Configure(builder);
 
         }
