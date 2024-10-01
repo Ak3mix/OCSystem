@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +17,8 @@ namespace OC_System.DataAccess.FluentConfigurations.Entities
 
         {
             builder.ToTable("Operaciones");
-            builder.Ignore(x => x.Fase);
-            builder.Ignore(x => x.Receta);
+            builder.Ignore(x => x.Fases);
+            builder.Ignore(x => x.Recetas);
             base.Configure(builder);
 
         }

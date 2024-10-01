@@ -3,19 +3,21 @@ using Grpc.Core;
 using OC_System.GrpcProtos;
 using OC_System.Contracts.Interfaces;
 using OC_System.Contracts;
+using AutoMapper;
+using MediatR;
 
 namespace GrpcService1.Services
 {
     public class OperacionService : Operacion.OperacionBase
     {
 
-        private IOperaracionRepository _operacionRepository;
-        private IUnitOfWork _unitOfWork;
+        private readonly IMediator _mediator;
+        private readonly IMapper _mapper;
 
-        public OperacionService(IOperaracionRepository operacionRepository, IUnitOfWork unitOfWork)
+        public OperacionService(IMediator mediator, IMapper mapper)
         {
-            _operacionRepository = operacionRepository;
-            _unitOfWork = unitOfWork;
+            _mediator = mediator;
+            _mapper = mapper;
         }
         public override Task<OperacionDTO> CreateOperacion(CreateOperacionRequest request, ServerCallContext context)
         {

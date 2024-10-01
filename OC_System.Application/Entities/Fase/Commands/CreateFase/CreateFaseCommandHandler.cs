@@ -19,7 +19,7 @@ namespace OC_System.Application.Entities.Fase.Commands.CreateFase
 
         public Task<OC_System.Dominio.Entities.Fase> Handle(CreateFaseCommand request, CancellationToken cancellationToken)
         {
-            OC_System.Dominio.Entities.Fase result = new OC_System.Dominio.Entities.Fase(request.name, request.code, request.description, request.Receta);
+            OC_System.Dominio.Entities.Fase result = new Dominio.Entities.Fase(request.id, request.nombre, request.code, request.descripcion);
 
             _faseRepository.AddFase(result);
             _unitOfWork.SaveChanges();

@@ -4,19 +4,23 @@ using OC_System.GrpcProtos;
 using OC_System_Contracts;
 using OC_System.Contracts.Interfaces;
 using OC_System.Contracts;
+using AutoMapper;
+using AutoMapper;
+using MediatR;
 
 namespace GrpcService1.Services
 {
     public class FaseService : Fase.FaseBase
     {
-        private IFaseRepository  _faseRepository;
-        private IUnitOfWork _unitOfWork;
+        private readonly IMediator _mediator;
+        private readonly IMapper _mapper;
 
-        public FaseService(IFaseRepository faseRepository, IUnitOfWork unitOfWork)
+        public FaseService(IMediator mediator,IMapper mapper)
         {
-            _faseRepository = faseRepository;
-            _unitOfWork = unitOfWork;
+            _mediator = mediator;
+            _mapper = mapper;
         }
+        
 
         public override Task<FaseDTO> CreateFase(CreateFaseRequest request, ServerCallContext context)
         {

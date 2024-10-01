@@ -3,19 +3,21 @@ using Grpc.Core;
 using OC_System.GrpcProtos;
 using OC_System.Contracts.Interfaces;
 using OC_System.Contracts;
+using AutoMapper;
+using MediatR;
 
 namespace GrpcService1.Services
 {
     public class RecetaService : Receta.RecetaBase
     {
 
-        private IRecetaRepository _recetaRepository;
-        private IUnitOfWork _unitOfWork;
+        private readonly IMediator _mediator;
+        private readonly IMapper _mapper;
 
-        public RecetaService(IRecetaRepository recetaRepository, IUnitOfWork unitOfWork)
+        public RecetaService(IMediator mediator, IMapper mapper)
         {
-            _recetaRepository = recetaRepository;
-            _unitOfWork = unitOfWork;
+            _mediator = mediator;
+            _mapper = mapper;
         }
         public override Task<RecetaDTO> CreateReceta(CreateRecetaRequest request, ServerCallContext context)
         {

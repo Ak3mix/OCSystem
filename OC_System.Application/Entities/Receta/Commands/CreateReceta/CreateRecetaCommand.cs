@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 namespace OC_System.Application.Entities.Receta.Commands.CreateReceta
 {
-    public record CreateRecetaCommand(string rname,string ocode, string rdescription, string codeUnidad) : ICommand<OC_System.Dominio.Entities.Receta>;
+    public record CreateRecetaCommand(Guid id,string rname,string rcode, string rdescription, string codeUnidad) : ICommand<OC_System.Dominio.Entities.Receta>;
 }

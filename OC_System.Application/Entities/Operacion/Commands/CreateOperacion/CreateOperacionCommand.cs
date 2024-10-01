@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 namespace OC_System.Application.Entities.Operacion.Commands.CreateOperacion
 {
-    public record CreateOperacionCommand(string oname, string ocode, string odescription, string codigoUnidad) : ICommand<OC_System.Dominio.Entities.Operacion>;
+    public record CreateOperacionCommand(Guid id,string oname, string ocode, string odescription, string codigoUnidad) : ICommand<OC_System.Dominio.Entities.Operacion>;
 }

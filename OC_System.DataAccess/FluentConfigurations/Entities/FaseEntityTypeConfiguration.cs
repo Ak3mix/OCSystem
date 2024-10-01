@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,13 +17,10 @@ namespace OC_System.DataAccess.FluentConfigurations.Entities
     {
         public override void Configure(EntityTypeBuilder<Fase> builder)
         {
-            
+
             builder.ToTable("Fases");
-            
-            builder.HasOne(x => x.Receta)
-                .WithMany()
-                .HasForeignKey(x => x.RecetaId);
-            builder.Ignore(x => x.Receta);
+            builder.Ignore(f => f.Recetas);
+            builder.Ignore(f => f.Operaciones);
             base.Configure(builder);
 
         }

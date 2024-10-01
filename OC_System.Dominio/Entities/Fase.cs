@@ -12,26 +12,23 @@ namespace OC_System.Dominio.Entities
         public string Code;
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-
-        public Receta? Receta { get; set; }
-
-        public Guid RecetaId { get; set; }
-        public List<Operacion> Operacion { get; set; } = new List<Operacion>();
+        public List<Receta> Recetas { get; set; }
+        public List<Operacion> Operaciones { get; set; }
 
 
 
 
         protected Fase() { }
 
-        public Fase(string nombre, string code, string descripcion, Receta? receta)
+        public Fase(Guid id, string nombre, string code, string descripcion) : base(id)
         {
             Nombre = nombre;
             Code = code;
             Descripcion = descripcion;
-            Receta= receta;
-            RecetaId= receta.Id;
 
-           
+            Operaciones= new List<Operacion>();
+            Recetas= new List<Receta>();
+
 
         }
     }

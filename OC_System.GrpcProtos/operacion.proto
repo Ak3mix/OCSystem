@@ -38,8 +38,9 @@ message NullableOperacionDTO{
 }
 
 message CreateOperacionRequest{
-	string onombre = 1;
-	string ocode = 2;
-	string odescripcion =3;
-	string ocodigoUnidad = 4;
+	string id = 1;
+	string onombre = 2;
+	string ocode = 3;
+	string odescripcion = 4;
+	string ocodigoUnidad = 5;
 }

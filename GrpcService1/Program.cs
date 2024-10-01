@@ -29,7 +29,7 @@ namespace GrpcService1
             app.MapGrpcService<RecetaService>();
             app.MapGrpcService<OperacionService>();
             app.MapGrpcService<GreeterService>();
-            
+            builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
             app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
 

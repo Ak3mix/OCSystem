@@ -27,23 +27,23 @@ namespace OC_System.DataAccess.Test
         public FaseTests()
         {
             ApplicationContext context = new ApplicationContext(ConnectionStringProvider.GetConnectionString());
-            _faseRepository = new FaseRepository(context); 
+            _faseRepository = new FaseRepository(context);
             _recetaRepository= new RecetaRepository(context);
             _unitOfWork = new UnitOfWork(context);
         }
 
-        [DataRow("Calentamiento","iqwe34","Fase de calentamiento inicial", "Receta1", "w12331","Descripcion", "io34")]
+        [DataRow("Calentamiento", "iqwe34", "Fase de calentamiento inicial")]
         [TestMethod]
-        public void Can_AddFase(string nombre, string code, string descripcion, string rnombre, string rcode ,string rdescripcion, string codigoUnidad)
+        public void Can_AddFase(string nombre, string code, string descripcion)
         {
 
             //Arrange
-            Receta receta= new Receta(rnombre,rcode,rdescripcion,codigoUnidad);
-            Fase fase = new Fase(nombre, code, descripcion, receta);
+            Guid id =Guid.NewGuid();
+            Fase fase = new Fase(id,nombre, code, descripcion);
 
 
             //Execute
-            _recetaRepository.AddReceta(receta);
+           
             _faseRepository.AddFase(fase);
             _unitOfWork.SaveChanges();
 

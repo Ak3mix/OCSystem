@@ -39,8 +39,9 @@ message NullableRecetaDTO{
 }
 
 message CreateRecetaRequest{
-  string rnombre= 1;
-  string rcode= 2;
-  string rdescripcion= 3;
-  string unidadCodigo= 4;
+  string id = 1;
+  string rnombre= 2;
+  string rcode= 3;
+  string rdescripcion= 4;
+  string unidadCodigo= 5;
 }

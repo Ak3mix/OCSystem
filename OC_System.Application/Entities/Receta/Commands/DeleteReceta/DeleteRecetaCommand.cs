@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 namespace OC_System.Application.Entities.Receta.Commands.DeleteReceta
 {
-    public record DeleteFaseCommand(Guid id) : ICommand;
+    public record DeleteRecetaCommand(Guid id) : ICommand;
 }
